@@ -1,0 +1,720 @@
+/* Poor accessibility CSS - targeting ~45% accessibility score */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    /* Poor base color contrast */
+    color: #6B7280;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+/* Header Styles - Missing focus indicators */
+.header {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    /* Poor contrast logo text */
+    color: #6B7280;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    /* Poor contrast navigation text */
+    color: #6B7280;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: #374151;
+}
+
+/* Missing focus indicators for interactive elements */
+.nav-item:focus {
+    outline: none;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sign-in-btn {
+    /* Poor contrast button text */
+    color: #6B7280;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sign-in-btn:hover {
+    color: #374151;
+}
+
+.get-started-btn {
+    /* Poor contrast button */
+    background: #60A5FA;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.get-started-btn:hover {
+    background: #3B82F6;
+}
+
+/* No focus indicators */
+.get-started-btn:focus {
+    outline: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #6B7280;
+    border-radius: 1px;
+}
+
+/* Hero Section - Poor contrast throughout */
+.hero {
+    background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+    padding: 5rem 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    /* Poor contrast main heading */
+    color: #6B7280;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    /* Very poor contrast description */
+    color: #9CA3AF;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.primary-btn {
+    /* Poor contrast primary button */
+    background: #60A5FA;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: #3B82F6;
+}
+
+.secondary-btn {
+    /* Very poor contrast secondary button */
+    border: 1px solid #9CA3AF;
+    color: #6B7280;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #F9FAFB;
+}
+
+/* No focus indicators for buttons */
+.primary-btn:focus,
+.secondary-btn:focus {
+    outline: none;
+}
+
+.hero-image {
+    margin-bottom: 4rem;
+}
+
+.dashboard-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.social-proof-text {
+    /* Poor contrast social proof text */
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0.6;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+    background: white;
+}
+
+.features-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    /* Poor contrast section titles */
+    color: #6B7280;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    /* Poor contrast descriptions */
+    color: #9CA3AF;
+    font-size: 1.25rem;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    padding: 1.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-icon-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* Poor contrast feature titles */
+    color: #6B7280;
+    margin-bottom: 0.75rem;
+}
+
+.feature-description {
+    /* Poor contrast feature descriptions */
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.feature-link {
+    /* Poor contrast links */
+    color: #60A5FA;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feature-link:hover {
+    text-decoration: underline;
+}
+
+.features-cta {
+    text-align: center;
+}
+
+.explore-btn {
+    /* Poor contrast CTA button */
+    background: #34D399;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.explore-btn:hover {
+    background: #10B981;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 5rem 0;
+    background: #F9FAFB;
+}
+
+.pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.pricing-card.popular {
+    border-color: #60A5FA;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #60A5FA;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Poor contrast plan names */
+    color: #6B7280;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.plan-price {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    /* Poor contrast pricing */
+    color: #6B7280;
+}
+
+.period {
+    /* Very poor contrast period text */
+    color: #9CA3AF;
+    margin-left: 0.25rem;
+}
+
+.plan-features {
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.checkmark {
+    /* Poor contrast checkmarks */
+    color: #34D399;
+    margin-right: 0.75rem;
+    font-weight: bold;
+}
+
+.feature-item span:last-child {
+    /* Poor contrast feature text */
+    color: #6B7280;
+}
+
+.plan-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.plan-btn.basic {
+    background: #F3F4F6;
+    /* Poor contrast basic button */
+    color: #6B7280;
+}
+
+.plan-btn.basic:hover {
+    background: #E5E7EB;
+}
+
+.plan-btn.popular {
+    /* Poor contrast popular button */
+    background: #60A5FA;
+    color: white;
+}
+
+.plan-btn.popular:hover {
+    background: #3B82F6;
+}
+
+/* No focus indicators for plan buttons */
+.plan-btn:focus {
+    outline: none;
+}
+
+.pricing-footer {
+    text-align: center;
+}
+
+.guarantee-text {
+    /* Poor contrast guarantee text */
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.custom-plan-link {
+    /* Poor contrast custom plan link */
+    color: #60A5FA;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.custom-plan-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.5rem;
+}
+
+.footer-logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.footer-description {
+    /* Poor contrast footer description */
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    /* Poor contrast social links */
+    background: #9CA3AF;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.social-link:hover {
+    background: #6B7280;
+}
+
+.footer-section-title {
+    font-weight: 600;
+    /* Poor contrast section titles */
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    /* Poor contrast footer links */
+    color: #9CA3AF;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+/* No focus indicators for footer links */
+.footer-link:focus {
+    outline: none;
+}
+
+.newsletter-section {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.newsletter-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    /* Poor contrast newsletter title */
+    color: #9CA3AF;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-description {
+    /* Poor contrast newsletter description */
+    color: #9CA3AF;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.email-input {
+    background: #374151;
+    border: 1px solid #4B5563;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 16rem;
+    /* Poor contrast input placeholder */
+    color: #9CA3AF;
+    cursor: text;
+}
+
+.subscribe-btn {
+    /* Poor contrast subscribe button */
+    background: #60A5FA;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.subscribe-btn:hover {
+    background: #3B82F6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.copyright {
+    /* Poor contrast copyright text */
+    color: #9CA3AF;
+}
+
+.separator {
+    margin: 0 0.5rem;
+}
+
+.footer-legal-link {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.footer-legal-link:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links,
+    .header-buttons {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .features-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-section {
+        flex-direction: column;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .email-input {
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: 100%;
+    }
+    
+    .subscribe-btn {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
+
+/* Poor focus management - minimal visible focus indicators */
+*:focus {
+    outline: 1px dotted #9CA3AF;
+    outline-offset: 2px;
+}
+
+/* Remove focus indicators from clickable divs */
+div[onclick]:focus {
+    outline: none;
+}

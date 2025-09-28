@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Missing page title for accessibility -->
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- No skip links, no main landmark -->
+    <div class="container">
+        <!-- Header without nav landmark -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <!-- Logo without alt text -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=40&h=40&fit=crop&crop=center" class="logo-img">
+                    <div class="logo-text">DataFlow</div>
+                </div>
+                
+                <!-- Navigation without proper structure -->
+                <div class="nav-links">
+                    <div class="nav-item">Features</div>
+                    <div class="nav-item">Pricing</div>
+                    <div class="nav-item">About</div>
+                    <div class="nav-item">Contact</div>
+                </div>
+                
+                <div class="header-buttons">
+                    <div class="sign-in-btn">Sign In</div>
+                    <!-- Button styled as div, missing role -->
+                    <div class="get-started-btn" onclick="handleGetStarted()">Get Started</div>
+                </div>
+                
+                <!-- Mobile menu button without accessibility -->
+                <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero section without section landmark -->
+        <div class="hero">
+            <div class="hero-content">
+                <!-- Wrong heading level - should be h1, but using h2 -->
+                <h2 class="hero-title">Unlock Your Data's Potential with DataFlow</h2>
+                
+                <p class="hero-description">
+                    Transform raw data into actionable insights with our powerful analytics and workflow automation platform. Join over 5,000 companies making data-driven decisions faster than ever.
+                </p>
+                
+                <!-- Buttons without proper semantics -->
+                <div class="hero-buttons">
+                    <div class="primary-btn" onclick="startTrial()">Start Free Trial</div>
+                    <div class="secondary-btn" onclick="watchDemo()">Watch Demo</div>
+                </div>
+                
+                <!-- Missing alt text for hero image -->
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" class="dashboard-img">
+                </div>
+                
+                <!-- Social proof without semantic meaning -->
+                <div class="social-proof">
+                    <p class="social-proof-text">Trusted by industry leaders</p>
+                    <div class="company-logos">
+                        <!-- Company logos without alt text -->
+                        <img src="https://logo.clearbit.com/microsoft.com">
+                        <img src="https://logo.clearbit.com/shopify.com">
+                        <img src="https://logo.clearbit.com/hubspot.com">
+                        <img src="https://logo.clearbit.com/stripe.com">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features section without section landmark -->
+        <div class="features">
+            <div class="features-content">
+                <!-- Poor heading hierarchy - skipping from h2 to h4 -->
+                <div class="section-header">
+                    <h4 class="section-title">Powerful Features for Modern Teams</h4>
+                    <p class="section-description">
+                        Everything you need to streamline your workflow and boost productivity
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Feature cards without proper structure -->
+                    <div class="feature-card">
+                        <!-- Images without proper labels -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">Real-time Analytics</h6>
+                        <p class="feature-description">Monitor your data streams and get instant insights with interactive dashboards</p>
+                        <div class="feature-link" onclick="learnMore('analytics')">Learn more →</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">Workflow Automation</h6>
+                        <p class="feature-description">Automate repetitive tasks and create seamless data pipelines</p>
+                        <div class="feature-link" onclick="learnMore('automation')">Learn more →</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">API Connectors</h6>
+                        <p class="feature-description">Connect to 200+ data sources and business applications instantly</p>
+                        <div class="feature-link" onclick="learnMore('connectors')">Learn more →</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">Predictive Insights</h6>
+                        <p class="feature-description">Use machine learning to forecast trends and identify opportunities</p>
+                        <div class="feature-link" onclick="learnMore('insights')">Learn more →</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">Data Security</h6>
+                        <p class="feature-description">Enterprise-grade encryption and compliance with SOC2, GDPR, and HIPAA</p>
+                        <div class="feature-link" onclick="learnMore('security')">Learn more →</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=60&h=60&fit=crop" class="feature-icon-img">
+                        <h6 class="feature-title">Custom Reports</h6>
+                        <p class="feature-description">Generate beautiful, shareable reports with drag-and-drop simplicity</p>
+                        <div class="feature-link" onclick="learnMore('reports')">Learn more →</div>
+                    </div>
+                </div>
+                
+                <div class="features-cta">
+                    <div class="explore-btn" onclick="exploreFeatures()">Explore All Features</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing section -->
+        <div class="pricing">
+            <div class="pricing-content">
+                <!-- Wrong heading level -->
+                <div class="section-header">
+                    <h5 class="section-title">Simple, Transparent Pricing</h5>
+                    <p class="section-description">Choose the plan that fits your team's needs</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <!-- Pricing cards without proper structure -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="price">$9</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <!-- Feature list without proper list semantics -->
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Up to 5 data sources</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>10GB data processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Basic dashboards</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Email support</span>
+                            </div>
+                        </div>
+                        <div class="plan-btn basic" onclick="selectPlan('starter')">Get Started</div>
+                    </div>
+                    
+                    <div class="pricing-card popular">
+                        <!-- Popular badge without proper semantics -->
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="price">$29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Up to 50 data sources</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>500GB data processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Advanced analytics & ML</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Priority support</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Full API access</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Custom workflows</span>
+                            </div>
+                        </div>
+                        <div class="plan-btn popular" onclick="selectPlan('professional')">Get Started</div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="price">$99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Unlimited data sources</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Unlimited data processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>White-label dashboards</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>24/7 phone & chat support</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Custom API endpoints</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>On-premise deployment</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="checkmark">✓</span>
+                                <span>Dedicated success manager</span>
+                            </div>
+                        </div>
+                        <div class="plan-btn basic" onclick="selectPlan('enterprise')">Get Started</div>
+                    </div>
+                </div>
+                
+                <div class="pricing-footer">
+                    <p class="guarantee-text">All plans include 30-day money-back guarantee</p>
+                    <div class="custom-plan-link" onclick="contactSales()">Need a custom plan? Contact our sales team</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer without footer landmark -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <!-- Company info without proper heading -->
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=40&h=40&fit=crop&crop=center" class="footer-logo-img">
+                            <div class="footer-logo-text">DataFlow</div>
+                        </div>
+                        <p class="footer-description">
+                            Transform your data into actionable insights. Trusted by over 5,000 companies worldwide.
+                        </p>
+                        <!-- Social media links without proper labels -->
+                        <div class="social-links">
+                            <div class="social-link" onclick="openSocial('twitter')"></div>
+                            <div class="social-link" onclick="openSocial('linkedin')"></div>
+                            <div class="social-link" onclick="openSocial('facebook')"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer sections without proper headings -->
+                    <div class="footer-section">
+                        <p class="footer-section-title">Product</p>
+                        <div class="footer-links">
+                            <div class="footer-link" onclick="navigate('features')">Features</div>
+                            <div class="footer-link" onclick="navigate('pricing')">Pricing</div>
+                            <div class="footer-link" onclick="navigate('integrations')">Integrations</div>
+                            <div class="footer-link" onclick="navigate('api')">API</div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <p class="footer-section-title">Company</p>
+                        <div class="footer-links">
+                            <div class="footer-link" onclick="navigate('about')">About</div>
+                            <div class="footer-link" onclick="navigate('careers')">Careers</div>
+                            <div class="footer-link" onclick="navigate('press')">Press</div>
+                            <div class="footer-link" onclick="navigate('blog')">Blog</div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <p class="footer-section-title">Support</p>
+                        <div class="footer-links">
+                            <div class="footer-link" onclick="navigate('help')">Help Center</div>
+                            <div class="footer-link" onclick="navigate('contact')">Contact</div>
+                            <div class="footer-link" onclick="navigate('status')">Status</div>
+                            <div class="footer-link" onclick="navigate('security')">Security</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter signup without proper form semantics -->
+                <div class="newsletter-section">
+                    <div class="newsletter-info">
+                        <h6 class="newsletter-title">Stay updated</h6>
+                        <p class="newsletter-description">Get the latest news and updates</p>
+                    </div>
+                    <!-- Form without proper semantics and labels -->
+                    <div class="newsletter-form">
+                        <div class="email-input" onclick="focusEmail()">Enter your email</div>
+                        <div class="subscribe-btn" onclick="subscribe()">Subscribe</div>
+                    </div>
+                </div>
+                
+                <!-- Copyright info without proper structure -->
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2025 SaaSify. All rights reserved. 
+                        <span class="separator">|</span>
+                        <span class="footer-legal-link" onclick="navigate('privacy')">Privacy Policy</span>
+                        <span class="separator">|</span>
+                        <span class="footer-legal-link" onclick="navigate('terms')">Terms of Service</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
